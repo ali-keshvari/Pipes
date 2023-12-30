@@ -1,13 +1,14 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
+import { ConvertPipe } from "./convert.pipe";
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [CommonModule, RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
+    selector: 'app-root',
+    standalone: true,
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.css',
+    imports: [CommonModule, RouterOutlet, ConvertPipe]
 })
 export class AppComponent {
   nameInput: string = '';
@@ -19,6 +20,7 @@ export class AppComponent {
     year : 2018,
     type : "s500"
   }
+  mileInput: number = 0;
   onNameChange(value: string) {
     this.nameInput = value;
   }
@@ -30,5 +32,8 @@ export class AppComponent {
   }
   onHeightChange(value: number) {
     this.heightInput = value;
+  }
+  onMileChange(value:number){
+    this.mileInput = value;
   }
 }

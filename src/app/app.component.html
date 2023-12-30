@@ -44,7 +44,7 @@
     <div class="form-group col">
       <label>Height :</label>
       <br>
-      <input type="text" class="form-control" (input)="onHeightChange($event.target.value)">
+      <input type="number" class="form-control" (input)="onHeightChange($event.target.value)">
     </div>
     <div class="col">
       <label>Height :</label>
@@ -52,5 +52,19 @@
       {{heightInput | number : "3.2-4"}}
     </div>
   </div>
+
   <div class="row">{{car|json}}</div>
+
+  <div class="row">
+    <div class="form-group col">
+      <label>Mile :</label>
+      <br>
+      <input type="number" class="form-control" (input)="onMileChange($event.target.value)">
+    </div>
+    <div class="col">
+      <label>KM :</label>
+      <br>
+      {{mileInput | convert : 'km'}}
+    </div>
+  </div>
 </div>
