@@ -7,8 +7,16 @@ import { RouterOutlet } from '@angular/router';
   standalone: true,
   imports: [CommonModule, RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
 export class AppComponent {
-  title = 'Pipes';
+  nameInput: string = '';
+  dateInput: string = '';
+
+  onNameChange(value: string) {
+    this.nameInput = value;
+  }
+  onDateChange(value: string){
+    this.dateInput = value;
+  }
 }
