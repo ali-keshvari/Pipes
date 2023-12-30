@@ -4,7 +4,7 @@
     <div class="form-group col">
       <label>Reciver Name :</label>
       <br>
-      <input type="text" (input)="onNameChange($event.target.value)">
+      <input type="text" class="form-control" (input)="onNameChange($event.target.value)">
     </div>
     <div class="col">
       <label>Reciver Name :</label>
@@ -18,7 +18,7 @@
     <div class="form-group col">
       <label>Payment Date :</label>
       <br>
-      <input type="date" (input)="onDateChange($event.target.value)">
+      <input type="date" class="form-control" (input)="onDateChange($event.target.value)">
     </div>
     <div class="col">
       <label>Payment Date  :</label>
@@ -26,4 +26,31 @@
       {{dateInput | date : 'longDate'}}
     </div>
   </div>
+
+  <div class="row">
+    <div class="form-group col">
+      <label>Amount :</label>
+      <br>
+      <input type="text" class="form-control" (input)="onAmountChange($event.target.value)">
+    </div>
+    <div class="col">
+      <label>Amount :</label>
+      <br>
+      {{amountInput | currency}}
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="form-group col">
+      <label>Height :</label>
+      <br>
+      <input type="text" class="form-control" (input)="onHeightChange($event.target.value)">
+    </div>
+    <div class="col">
+      <label>Height :</label>
+      <br>
+      {{heightInput | number : "3.2-4"}}
+    </div>
+  </div>
+  <div class="row">{{car|json}}</div>
 </div>
