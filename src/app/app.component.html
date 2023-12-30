@@ -61,7 +61,7 @@
       <br>
       <input type="number" class="form-control" (input)="onMileChange($event.target.value)">
     </div>
-    <div class="col">
+    <div class="col" *ngIf="(mileInput | convert : 'km') > 10">
       <label>KM :</label>
       <br>
       {{mileInput | convert : 'km'}}
